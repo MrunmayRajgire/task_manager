@@ -1,0 +1,27 @@
+FROM node:18-alpine
+
+# Add build dependencies
+RUN apk add --no-cache python3 make g++
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Create necessary directories for logs
+RUN mkdir -p /app/logs && \
+    touch /app/logs/error.log /app/logs/combined.log && \
+    chown -R node:node /app/logs
+
+# Switch to non-root user
+USER node
+
+EXPOSE 4000
+
+CMD ["npm", "run", "dev"] 

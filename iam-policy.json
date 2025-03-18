@@ -1,0 +1,66 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecs:*",
+                "ecr:*",
+                "rds:*",
+                "s3:*",
+                "vpc:*",
+                "ec2:*",
+                "iam:*",
+                "cloudwatch:*",
+                "logs:*",
+                "elasticloadbalancing:*"
+            ],
+            "Resource": [
+                "arn:aws:ecs:*:*:cluster/task-management-*",
+                "arn:aws:ecr:*:*:repository/task-management-*",
+                "arn:aws:rds:*:*:db:task-management-*",
+                "arn:aws:s3:::task-management-terraform-state",
+                "arn:aws:s3:::task-management-terraform-state/*",
+                "arn:aws:vpc:*:*:vpc/*",
+                "arn:aws:ec2:*:*:vpc/*",
+                "arn:aws:ec2:*:*:subnet/*",
+                "arn:aws:ec2:*:*:security-group/*",
+                "arn:aws:ec2:*:*:route-table/*",
+                "arn:aws:ec2:*:*:internet-gateway/*",
+                "arn:aws:iam::*:role/task-management-*",
+                "arn:aws:iam::*:policy/task-management-*",
+                "arn:aws:logs:*:*:log-group:/ecs/task-management-*",
+                "arn:aws:elasticloadbalancing:*:*:loadbalancer/*/task-management-*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecs:ListClusters",
+                "ecr:ListRepositories",
+                "rds:DescribeDBInstances",
+                "s3:ListBucket",
+                "vpc:DescribeVpcs",
+                "iam:ListRoles",
+                "cloudwatch:ListMetrics",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeInternetGateways",
+                "ec2:DescribeRouteTables",
+                "ec2:CreateVpc",
+                "ec2:CreateSubnet",
+                "ec2:CreateSecurityGroup",
+                "ec2:CreateRouteTable",
+                "ec2:CreateInternetGateway",
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:ListRolePolicies",
+                "iam:GetRole",
+                "iam:PassRole"
+            ],
+            "Resource": "*"
+        }
+    ]
+} 
