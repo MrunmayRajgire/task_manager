@@ -1,0 +1,54 @@
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Build artifacts
+dist
+build
+coverage
+
+# Tests
+/test
+/tests
+/__tests__
+/*.spec.ts
+/*.test.ts
+
+# Development configs
+.eslintrc
+.prettierrc
+.mocharc
+nodemon.json
+tsconfig.json
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Git
+.git
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+error.log
+combined.log
+
+# Documentation
+README.md
+CHANGELOG.md
+docs 

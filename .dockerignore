@@ -1,0 +1,62 @@
+# Git
+.git
+.gitignore
+
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Build artifacts
+dist
+build
+coverage
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.*.yml
+
+# Terraform
+terraform
+.terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Temp files
+tmp
+temp
+*.tmp
+
+# Tests
+**/tests
+**/test
+**/spec
+coverage
+
+# Documentation
+README.md
+CHANGELOG.md
+docs 
